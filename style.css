@@ -1,10 +1,24 @@
 /* Google Fonts Import for Y2K/Coquette Aesthetic */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Poppins:wght@400;600&display=swap');
 
+:root {
+    --pink-bg: #fce4ec;
+    --pink-deep: #880e4f;
+    --pink-mid: #a8325e;
+    --pink-accent: #d87093;
+    --pink-accent-dark: #c25975;
+    --text-mauve: #4a3b42;
+    --text-contact: #4a2030;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 /* Page Setup */
 body {
     font-family: 'Poppins', Arial, sans-serif;
-    background-color: #fce4ec; /* Soft pale pink background */
+    background-color: var(--pink-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,28 +29,40 @@ body {
 
 /* Main Card */
 .card {
-    background-color: #ffffff; /* Crisp white card background */
+    background-color: #ffffff;
     border-radius: 20px;
     padding: 25px;
     max-width: 900px;
     width: 100%;
     display: flex;
     gap: 25px;
-    box-shadow: 0 8px 25px rgba(216, 112, 147, 0.15); /* Soft rose shadow */
+    box-shadow: 0 8px 25px rgba(216, 112, 147, 0.15);
+    animation: fade-in 0.5s ease-out;
+}
+
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 /* Left Image */
+.left-pic {
+    flex-shrink: 0;
+}
+
 .left-pic img {
     width: 250px;
     height: 100%;
     min-height: 400px;
     object-fit: cover;
     border-radius: 15px;
+    display: block;
 }
 
 /* Content Area */
 .main-content {
     flex: 1;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -46,28 +72,30 @@ body {
 .row {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .col {
-    flex: 1;
+    flex: 1 1 200px;
+    min-width: 0;
 }
 
-/* Headings & Text Styling matched to Reference Image */
+/* Headings & Text Styling */
 h1 {
-    font-family: 'Comfortaa', cursive, sans-serif; /* Rounded bubble title */
-    font-size: 2.8rem;
+    font-family: 'Comfortaa', cursive, sans-serif;
+    font-size: clamp(2.1rem, 6vw, 2.8rem);
     font-weight: 700;
     margin: 0;
-    color: #880e4f; /* Deep berry pink */
+    color: var(--pink-deep);
     letter-spacing: -1px;
 }
 
 h2 {
-    font-family: 'Comfortaa', cursive, sans-serif; /* Soft rounded titles */
-    font-size: 1.6rem;
+    font-family: 'Comfortaa', cursive, sans-serif;
+    font-size: clamp(1.3rem, 4vw, 1.6rem);
     font-weight: 700;
     margin: 0 0 10px 0;
-    color: #a8325e;
+    color: var(--pink-mid);
 }
 
 .heading-with-icon {
@@ -81,54 +109,64 @@ h2 {
     height: 35px;
 }
 
-/* Main body text font */
+/* Main body text */
 .text {
     font-family: 'Poppins', Arial, sans-serif;
     font-size: 0.85rem;
-    color: #4a3b42; /* Soft dark mauve */
+    color: var(--text-mauve);
     margin: 8px 0;
     line-height: 1.5;
+    word-wrap: break-word;
 }
 
 .bold {
     font-weight: 600;
 }
 
-/* Updated: Styled identical to standard body text */
 .grey {
     font-family: 'Poppins', Arial, sans-serif;
     font-size: 0.85rem;
-    color: #4a3b42;
+    color: var(--text-mauve);
     line-height: 1.5;
     margin: 4px 0;
 }
 
-.item {
-    margin-bottom: 10px;
+a {
+    color: var(--pink-mid);
+}
+
+a:focus-visible,
+.square-box:focus-visible {
+    outline: 3px solid var(--pink-accent-dark);
+    outline-offset: 2px;
 }
 
 /* Skills Boxes */
 .skills-grid {
+    list-style: none;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 8px;
-    width: 180px;
+    width: 100%;
+    max-width: 180px;
+    margin: 0;
+    padding: 0;
 }
 
 .square-box {
     font-family: 'Comfortaa', sans-serif;
-    background-color: #d87093; /* Soft rose pink */
+    background-color: var(--pink-accent);
     color: #fff;
     font-size: 0.75rem;
     font-weight: 700;
     text-align: center;
-    padding: 12px 0;
+    padding: 12px 4px;
     border-radius: 8px;
     transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .square-box:hover {
-    background-color: #c25975;
+    background-color: var(--pink-accent-dark);
     transform: translateY(-2px);
 }
 
@@ -147,13 +185,21 @@ h2 {
     align-items: center;
     gap: 6px;
     text-decoration: none;
-    color: #4a2030;
+    color: var(--text-contact);
     font-size: 0.8rem;
     font-weight: 700;
+    padding: 4px 2px;
+    border-radius: 8px;
+    transition: color 0.2s ease;
+    word-break: break-word;
+}
+
+.contact-btn:hover {
+    color: var(--pink-accent-dark);
 }
 
 .icon-circle {
-    background-color: #d87093; /* Rose accent */
+    background-color: var(--pink-accent);
     color: #fff;
     width: 24px;
     height: 24px;
@@ -162,15 +208,67 @@ h2 {
     align-items: center;
     justify-content: center;
     font-size: 0.7rem;
+    flex-shrink: 0;
 }
 
-/* Mobile Friendly Adjustment */
+/* Tablet & below */
 @media (max-width: 700px) {
-    .card, .row {
+    .card {
         flex-direction: column;
+        padding: 20px;
+        gap: 20px;
     }
+
     .left-pic img {
         width: 100%;
-        height: 250px;
+        height: 220px;
+        min-height: 0;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .skills-grid {
+        max-width: 260px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 420px) {
+    body {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .left-pic img {
+        height: 180px;
+        border-radius: 12px;
+    }
+
+    .contact-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .skills-grid {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .card {
+        animation: none;
+    }
+    .square-box,
+    .contact-btn {
+        transition: none;
     }
 }

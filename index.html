@@ -4,75 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <meta name="theme-color" content="#fce4ec">
+    <meta name="description" content="Hiba Amin — Software developer portfolio">
+    <title>Hiba Amin | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="card">
+    <main class="card">
 
         <div class="left-pic">
-            <img src="logo.png" alt="Profile Picture">
+            <img src="logo.png" alt="Hiba Amin" loading="lazy">
         </div>
 
         <div class="main-content">
 
             <div class="row">
 
-                <div class="col">
+                <section class="col">
                     <div class="heading-with-icon">
                         <h1>Hello!</h1>
-                        <img src="icon.png" alt="Icon" class="small-icon">
+                        <img src="icon.png" alt="" class="small-icon" aria-hidden="true">
                     </div>
                     <p class="text">
                         My name is Hiba Amin, and I'm a passionate software developer with a strong foundation in
                         computer science and a keen interest in creating innovative solutions.
                     </p>
                     <p class="text bold">Hope you enjoy my portfolio!</p>
-                </div>
+                </section>
 
-                <div class="col">
+                <section class="col">
                     <h2>Skills</h2>
-                    <div class="skills-grid">
-                        <div class="square-box">C++</div>
-                        <div class="square-box">Python</div>
-                        <div class="empty-box"></div> 
-                        <div class="square-box">HTML</div>
-                        <div class="square-box">PPT</div>
-                    </div>
-                </div>
+                    <ul class="skills-grid">
+                        <li class="square-box">C++</li>
+                        <li class="square-box">Python</li>
+                        <li class="square-box">HTML</li>
+                        <li class="square-box">PPT</li>
+                    </ul>
+                </section>
 
             </div>
 
             <div class="row">
 
-                <div class="col">
+                <section class="col">
                     <h2>Education</h2>
-                    <p class="text"><strong>University of Central Punjab</strong></p>
+                    <p class="text"><strong><a href="https://www.ucp.edu.pk/" target="_blank" rel="noopener noreferrer">University of Central Punjab</a></strong></p>
                     <p class="text">Bachelor of Artificial Intelligence | 2025 – 2029</p>
                     <p class="text grey">Graduate with a major in Artificial Intelligence</p>
-                </div>
+                </section>
 
             </div>
 
-            <div class="contact-row">
+            <nav class="contact-row" aria-label="Contact links">
                 <a href="tel:03343511166" class="contact-btn">
-                    <span class="icon-circle">📞</span>
+                    <span class="icon-circle" aria-hidden="true">📞</span>
                     <span>0334-3511166</span>
                 </a>
                 <a href="mailto:workhiba24@gmail.com" class="contact-btn">
-                    <span class="icon-circle">✉️</span>
+                    <span class="icon-circle" aria-hidden="true">✉️</span>
                     <span>workhiba24@gmail.com</span>
                 </a>
-                <a href="https://github.com/hibaAmin24" target="_blank" class="contact-btn">
-                    <span class="icon-circle">💻</span>
+                <a href="https://github.com/hibaAmin24" target="_blank" rel="noopener noreferrer" class="contact-btn">
+                    <span class="icon-circle" aria-hidden="true">💻</span>
                     <span>GitHub</span>
                 </a>
-            </div>
+            </nav>
 
         </div>
 
-    </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
