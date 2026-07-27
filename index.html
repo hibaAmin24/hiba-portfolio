@@ -4,77 +4,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#fce4ec">
-    <meta name="description" content="Hiba Amin — Software developer portfolio">
-    <title>Hiba Amin | Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main class="card">
+    <div class="card">
 
         <div class="left-pic">
-            <img src="logo.png" alt="Hiba Amin" loading="lazy">
+            <img src="logo.png" alt="Profile Picture">
         </div>
 
         <div class="main-content">
 
             <div class="row">
 
-                <section class="col">
+                <div class="col">
                     <div class="heading-with-icon">
                         <h1>Hello!</h1>
-                        <img src="icon.png" alt="" class="small-icon" aria-hidden="true">
+                        <img src="small-logo.png" alt="Icon" class="small-icon">
                     </div>
                     <p class="text">
                         My name is Hiba Amin, and I'm a passionate software developer with a strong foundation in
                         computer science and a keen interest in creating innovative solutions.
                     </p>
                     <p class="text bold">Hope you enjoy my portfolio!</p>
-                </section>
+                </div>
 
-                <section class="col">
+                <div class="col">
                     <h2>Skills</h2>
-                    <ul class="skills-grid">
-                        <li class="square-box">C++</li>
-                        <li class="square-box">Python</li>
-                        <li class="square-box">HTML</li>
-                        <li class="square-box">PPT</li>
-                    </ul>
-                </section>
+                    <div class="skills-grid">
+                        <!-- Row 1 -->
+                        <div class="square-box">C++</div>
+                        <div class="square-box">Python</div>
+                        <div class="empty-box"></div> <!-- Fills 3rd slot on row 1 -->
+
+                        <!-- Row 2 -->
+                        <div class="square-box">HTML</div>
+                        <div class="square-box">PPT</div>
+                    </div>
+                </div>
 
             </div>
 
             <div class="row">
 
-                <section class="col">
+                <div class="col">
                     <h2>Education</h2>
-                    <p class="text"><strong><a href="https://www.ucp.edu.pk/" target="_blank" rel="noopener noreferrer">University of Central Punjab</a></strong></p>
+                    <p class="text"><strong>University of Central Punjab</strong></p>
                     <p class="text">Bachelor of Artificial Intelligence | 2025 – 2029</p>
                     <p class="text grey">Graduate with a major in Artificial Intelligence</p>
-                </section>
+                </div>
 
             </div>
 
-            <nav class="contact-row" aria-label="Contact links">
+            <div class="contact-row">
                 <a href="tel:03343511166" class="contact-btn">
-                    <span class="icon-circle" aria-hidden="true">📞</span>
+                    <span class="icon-circle">📞</span>
                     <span>0334-3511166</span>
                 </a>
                 <a href="mailto:workhiba24@gmail.com" class="contact-btn">
-                    <span class="icon-circle" aria-hidden="true">✉️</span>
+                    <span class="icon-circle">✉️</span>
                     <span>workhiba24@gmail.com</span>
                 </a>
-                <a href="https://github.com/hibaAmin24" target="_blank" rel="noopener noreferrer" class="contact-btn">
-                    <span class="icon-circle" aria-hidden="true">💻</span>
+                <a href="https://github.com/hibaAmin24" target="_blank" class="contact-btn">
+                    <span class="icon-circle">💻</span>
                     <span>GitHub</span>
                 </a>
-            </nav>
+            </div>
 
         </div>
 
-    </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
